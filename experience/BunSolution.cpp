@@ -3,9 +3,13 @@
 //
 #include <iostream>
 #include <vector>
+#include <stdio.h>
+#include <time.h>
+#include <windows.h>
 #include <algorithm>
 #include <string>
 #include <unordered_map>
+#include <iomanip>
 
 using namespace std;
 
@@ -35,6 +39,7 @@ public:
         cout << endl;
     }
 
+    // 全排列问题的实现
     void permutation(vector<int> nums, int start) {
         int end = nums.size() - 1;
         if (start == end) printNums(nums);
@@ -172,6 +177,12 @@ int maxSummary(int N, int D, vector<vector<int>> &nums) {
     return max;
 }
 
+double racingHorse(int num) {
+    double sum = 0;
+    for (int i = 1; i <= num; i++) sum = sum + 1.0 / i;
+    return sum;
+}
+
 int random(int x) {
     return rand() % x;
 }
@@ -213,73 +224,6 @@ void new_random100_address(vector<int>& v1) {
 int main() {
     BunSolution bunSolution;
 
-    /*
-//    vector<int> num_array = {2, 7, 11, 15};
-//    int target = 22;
-//    vector<int> result = solution.twoSum(num_array, target);
-
-//    ListNode *n11 = new ListNode(9);
-//    ListNode *n12 = new ListNode(8);
-//    ListNode *n13 = new ListNode(7);
-//    n12->next = n13;
-//    n11->next = n12;
-//    ListNode *n21 = new ListNode(9);
-//    ListNode *n22 = new ListNode(8);
-//    ListNode *n23 = new ListNode(7);
-//    ListNode *n24 = new ListNode(9);
-//    n23->next = n24;
-//    n22->next = n23;
-//    n21->next = n22;
-//    ListNode *l3 = solution.addTwoNumbers(n11, n21);
-
-//    vector<int> nums = {0,0,0,-1,-2,-3,100};
-//    vector<vector<int>> result = solution.threeSum(nums);
-
-//    vector<string> strs = {"1234567", "1234", "123", "122"};
-//    string prefix = solution.longestCommonPrefix(strs);
-
-//    int test_num = 1234554321;
-//    bool flag = solution.isPalindrome(test_num);
-
-//    int num = solution.romanToInt("XIV");
-//    string bunStr = solution.intToRoman(14);
-//    int length = solution.lengthOfLongestSubstring("dvdf");
-
-//    vector<int> nums1 = {1, 2, 3};
-//    vector<int> nums2 = {1, 2, 3};
-//    double median = solution.findMedianSortedArrays(nums1, nums2);
-
-//    string s = "aaabaaaa";
-//    string sub = solution.longestPalindrome(s);
-
-//    int num = 1563847412;
-//    int reverse_num = solution.reverse(num);
-
-//    BinaryTreeNode *n1 = new BinaryTreeNode(8);
-//    BinaryTreeNode *n2 = new BinaryTreeNode(6);
-//    BinaryTreeNode *n3 = new BinaryTreeNode(10);
-//    BinaryTreeNode *n4 = new BinaryTreeNode(5);
-//    BinaryTreeNode *n5 = new BinaryTreeNode(7);
-//    BinaryTreeNode *n6 = new BinaryTreeNode(9);
-//    BinaryTreeNode *n7 = new BinaryTreeNode(11);
-//
-//    n1->left = n2, n1->right = n3;
-//    n2->left = n4, n2->right = n5;
-//    n3->left = n6, n3->right = n7;
-//
-//    bunSolution.mirrorBinaryTree(n1);
-//
-//    vector<int> nums = {1, 2, 3, 4};
-
-    // bunSolution.permutation(nums);
-
-    // bunSolution.eight_queens();
-//    string str;
-//    cin >> str;
-//    string result = stringEncoding(str);
-//    cout << result;
-    */
-
     int N;
     int D;
     cin >> N;
@@ -292,6 +236,10 @@ int main() {
     int max = maxSummary(N, D, nums);
 
     cout << max;
+
+    double sum = racingHorse(2);
+
+    cout << setiosflags(ios::fixed) << setprecision(4) << sum << endl;
 
     return 0;
 }
