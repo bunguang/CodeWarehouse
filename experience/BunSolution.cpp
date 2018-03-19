@@ -5,7 +5,6 @@
 #include <vector>
 #include <stdio.h>
 #include <time.h>
-#include <windows.h>
 #include <algorithm>
 #include <string>
 #include <unordered_map>
@@ -221,25 +220,26 @@ void new_random100_address(vector<int>& v1) {
     }
 }
 
-int main() {
-    BunSolution bunSolution;
-
-    int N;
-    int D;
-    cin >> N;
-    cin >> D;
-    vector<vector<int>> nums(N, vector<int>(N));
-
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < N; j++) cin >> nums[i][j];
-
-    int max = maxSummary(N, D, nums);
-
-    cout << max;
-
-    double sum = racingHorse(2);
-
-    cout << setiosflags(ios::fixed) << setprecision(4) << sum << endl;
-
-    return 0;
-}
+//int main() {
+//    BunSolution bunSolution;
+//
+//    int N;
+//    int D;
+//    cin >> N;
+//    cin >> D;
+//    vector<vector<int>> nums(N, vector<int>(N));
+//
+//    for (int i = 0; i < N; i++)
+//        for (int j = 0; j < N; j++) cin >> nums[i][j];
+//
+//    int max = maxSummary(N, D, nums);
+//
+//    cout << max;
+//
+//    int num;
+//    cin >> num;
+//    double sum = racingHorse(num);
+//    cout << setiosflags(ios::fixed) << setprecision(4) << sum << endl;
+//
+//    return 0;
+//}

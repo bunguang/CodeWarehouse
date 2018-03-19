@@ -45,24 +45,24 @@ void bfs() {
     }
 
 }
-
-int main() {
-    scanf("%d %d", &N, &M);
-    for (int n = 0; n < N; n++)
-        scanf("%s", &maze[n]);
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < M; j++) {
-            if (maze[i][j] == 'S') {
-                sx = i;
-                sy = j;
-            }
-            if (maze[i][j] == 'G') {
-                gx = i;
-                gy = j;
-            }
-        }
-    bfs();
-    printf("%d\n", d[gx][gy]);
-
-    return 0;
-}  
+//
+//int main() {
+//    scanf("%d %d", &N, &M);
+//    for (int n = 0; n < N; n++)
+//        scanf("%s", &maze[n]);
+//    for (int i = 0; i < N; i++)
+//        for (int j = 0; j < M; j++) {
+//            if (maze[i][j] == 'S') {
+//                sx = i;
+//                sy = j;
+//            }
+//            if (maze[i][j] == 'G') {
+//                gx = i;
+//                gy = j;
+//            }
+//        }
+//    bfs();
+//    printf("%d\n", d[gx][gy]);
+//
+//    return 0;
+//}
